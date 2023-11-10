@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project</title>
+    <link rel="stylesheet" href="main.css">
+
+      <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->  
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- contact form sending mail  -->
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init("jk00CPk91iV1xBScD");
+    })();
+  </script>
+  <script type="text/javascript">
+    window.onload = function() {
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // generate a five digit number for the contact_number variable
+            this.contact_number.value = Math.random() * 100000 | 0;
+            // these IDs from the previous steps
+            emailjs.sendForm('contact_service', 'contact_form', this)
+                .then(function() {
+                    console.log('SUCCESS!');
+                }, function(error) {
+                    console.log('FAILED...', error);
+                });
+        });
+    }
+</script>
+<script src="script.js"></script>
+
+</head>
+<body>
+    <header id="header" class="pt-2 ">
+       <div class="d-flex flex-column">
+         <div class="profile">
+          <img src="img/pro-pic-2.jpg" alt="profile" class="img-fluid  rounded-circle">
+          <h1 class="text-white"><a href="Index.html">Khondoker Aminuzzaman</a></h1>
+          <div class="social-links mt-3 text-center">
+            <a href="https://www.linkedin.com/in/aminuzz110090822/" target="_blank" class="linkedin"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/khshohag99" target="_blank" class="github"><i class='bx bxl-github' ></i></a>
+            <a href="https://www.facebook.com/khshohag199/" target="_blank" class="facebook"><i class='bx bxl-facebook'></i></a>
+            <a href="https://www.instagram.com/khshohag99/" target="_blank" class="instagram"><i class='bx bxl-instagram'></i></a>
+          </div>
+         </div>
+
+         <!-- Navigation Menu  -->
+        <nav class="nav-menu">
+            <ul>
+                <li class="active"><a href="#hero"><i class='bx bx-home' ></i><span>Home</span></a></li>
+                <li><a href="#about"><i class='bx bx-user' ></i><span>About</span></a></li>
+                <li><a href="#skills"><i class='bx bx-run'></i><span>Skills</span></a></li>
+                <li><a href="#resume"><i class='bx bx-notepad'></i><span>Resume</span></a></li>
+                <li><a href="#project"><i class='bx bx-atom'></i><span>Projects</span></a></li>
+                <li><a href="#contact"><i class='bx bx-envelope' ></i><span>Contact</span></a></li>
+            </ul>
+        </nav>
+        <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+        
+       </div>
+    </header>
+
+    <!-- Hero Section  -->
+    <section id="hero" class="d-flex flex-column justify-content-center align-items-center ">
+      <div class="hero-container" data-aos="fade-in">
+        <h1>Khondoker Aminuzzaman</h1>
+        <p>I am a <span class="typed" data-typed-items="Web Designer, Web Developer, Android App Developer, iOS App Developer"></span></p>
+        <a href="resume/Khondoker_Aminuzzaman_Resume.pdf" download>
+          <button type="button" id="download-resume" class="btn">Resume<i class="fa-solid fa-download ml-2"></i></button>
+        </a>
+        <!-- <button type="button" id="download-resume" class="btn">Resume<i class="fa-solid fa-download ml-2"></i></button> -->
+      </div>
+    </section>
+
+    <main id="main">
+    
+      <!--============About Section================-->
+      <section id="about" class="about py-5 ">
+        <div class="container">
+          <div class="section-title">
+            <h2 class="about-h2">About</h2>
+            <p>Passionate and detail-oriented UI/UX Designer & Web Developer with a strong foundation in software engineering and a keen eye for innovative design. Committed to delivering high-quality, user-centric solutions that blend functionality with aesthetic appeal.</p>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 mb-4" data-aos="fade-right">
+             <img src="img/about.jpg" alt="image" class="img-fluid about-img" >
+            </div>
+            <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+              <h3>Professional Background</h3>
+              <p class="font-italic">I am currently pursuing my Master's in Applied Computing at the University of Windsor, building expertise in Advanced Software Engineering, Computing Concepts, and Networking.</p>
+              <p class="font-italic">Previously, I earned my Bachelor's in Electrical and Computer Engineering from North South University, Dhaka, Bangladesh. My coursework included Database Management System, Operating System Design, and Internet/Web Technology.</p>             
+              <p class="font-italic">One of my recent projects is the "Swastha Health Monitoring System," a cross-platform mobile app developed using Flutter and Dart. It enables users to monitor various health metrics and daily COVID-19 cases. I have also contributed to projects like "Smart Shop" and "Wedding Service Portal," showcasing my skills in web development.</p>
+            </div>
+            <p>If you're looking for a creative problem solver and a dedicated team player, I'd love to connect and discuss how I can contribute to your projects. Feel free to reach out via email at khondoker.aminuzzaman@gmail.com or connect with me on <a href="https://www.linkedin.com/in/aminuzz110090822/">LinkedIn</a>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============Skill Section=============  -->
+      <section id="skills" class="skills section-bg py-5 ">
+        <div class="container">
+          <div class="section-title">
+            <h2>Skills</h2>
+            <p>Dedicated developer with a flair for crafting engaging web and mobile experiences. Skilled in diverse technologies and tools, I bring creativity and precision to every project, ensuring effective and elegant solutions.</p>
+          </div>
+          <div class="row" data-aos="fade-up">
+            <div class="col-lg-12 d-flex justify-content-center mt-3">
+              <ul id="skill-flters">
+                <!-- <li data-filter="*" class="filter-active">All</li> -->
+                <li data-filter=".filter-language" class="filter-active">Programming</li>
+                <li data-filter=".filter-web">Web-App</li>
+                <li data-filter=".filter-mobile">Mobile-App</li>
+                <li data-filter=".filter-cloud">Cloud</li>
+                <li data-filter=".filter-tools">Tools</li>
+              </ul>
+            </div>
+          </div>
+          <div class="row skills-content">
+            <div class="col-lg-8 mx-auto" data-aos="fade-up">
+              <!--========== Programming Languages ========= -->
+              <!-- C  -->
+              <div class="progress filter-language">
+                <!-- <span class="skill">C<i class="val">100%</i> </span> -->
+                <span class="skill">C</span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <!-- Java  -->
+              <div class="progress filter-language">
+                <span class="skill">Java</span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <!-- Python  -->
+              <div class="progress filter-language">
+                <span class="skill">Python</span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <!-- C++  -->
+              <div class="progress filter-language">
+                <span class="skill">C++</span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <!-- Dart  -->
+              <div class="progress filter-language">
+                <span class="skill">Dart</span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <!--========== Web-App ========= -->
+              <!-- HTML  -->
+              <div class="progress filter-web">
+                <span class="skill">HTML</span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <!-- css  -->
+              <div class="progress filter-web">
+                <span class="skill">CSS</span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>  
+              <!-- Boot Strap  -->
+              <div class="progress filter-web">
+                <span class="skill">BootStrap</span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <!-- Java Script  -->
+              <div class="progress filter-web">
+                <span class="skill">Java Script</span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <!-- Django  -->
+              <div class="progress filter-web">
+                <span class="skill">Django</span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>          
+              <!-- PHP -->
+              <div class="progress filter-web">
+                <span class="skill">PHP</span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div> 
+              <!-- MySql -->
+              <div class="progress filter-web">
+                <span class="skill">MySQL</span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div> 
+              <!-- MongoDB -->
+              <div class="progress filter-web">
+                <span class="skill">MongoDB</span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div> 
+              <!--========== Mobile-App ========= --> 
+              <!-- Flutter -->
+              <div class="progress filter-mobile">
+                <span class="skill">Flutter</span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div> 
+              <!-- Dart-->
+              <div class="progress filter-mobile">
+                <span class="skill">Dart</span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div> 
+              <!-- FireStore-->
+              <div class="progress filter-mobile">
+                <span class="skill">Firestore</span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div> 
+              <!-- Firebase-->
+              <div class="progress filter-mobile">
+                <span class="skill">Firebase</span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div> 
+              <!--========== Cloud ========= --> 
+              <div class="progress filter-cloud">
+                <span class="skill">AWS</span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div> 
+              <div class="progress filter-cloud">
+                <span class="skill">Microsoft Azure</span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div> 
+              <!--========== Tools ========= --> 
+              <div class="progress filter-tools">
+                <span class="skill">Github</span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div> 
+              <div class="progress filter-tools">
+                <span class="skill">Jira</span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div> 
+                         
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- ======================================= Resume Section ========================================================= -->
+    <section id="resume" class="resume bg-resume py-5 ">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Resume</h2>
+          <p>My goal is to bring innovation to life through web and mobile applications. With a robust educational background and practical experience, I am committed to delivering high-quality solutions and contributing to the dynamic field of software development.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up">
+            <!--================ Summary ============= -->
+            <h3 class="resume-title">Summary</h3>
+            <div class="resume-item pb-0">
+              <h4>Khondoker Aminuzzaman</h4>
+              <p><em>I am a passionate individual with a deep love for coding and problem-solving. My skills span various programming languages and technologies, enabling me to create innovative web and mobile applications. With a strong educational background and practical experience, I am committed to delivering high-quality solutions and contributing to the ever-evolving world of software development.</em></p>             
+            </div>
+
+            <!--================ Education ============= -->
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Master of Applied Computing</h4>
+              <h5>September 2022 - December 2023</h5>
+              <p><em>University of Windsor, Windsor, ON, Canada</em></p>
+              <p>Relevant course work: Advanced Software Engineering, Advanced Computing Concepts, Networking and Data Security.</p>
+            </div>
+            <div class="resume-item">
+              <h4>Bachelor of Electrical &amp; Computer Engineering</h4>
+              <h5>May 2015 - May 2020</h5>
+              <p><em>North South University, Dhaka, Bangladesh</em></p>
+              <p>Relevant course work: Database Management System, Operating System Design, Internet and Web Technology.</p>
+            </div>
+
+            
+              <!--================ Volunteer Experience ============= -->
+              <h3 class="resume-title">Volunteer Activities</h3>
+              <div class="resume-item">
+                <h4>Member</h4>
+                <h5>September 2015 - April 2017</h5>
+                <p><em>Social Services Club, North South University, Dhaka, Bangladesh</em></p>
+                <ul>
+                  <li>Coordinated, planned, and executed over 10 events annually in collaboration with club members, showcasing strong organizational and coordination abilities.</li>
+                  <li>Conducted weekly meetings to facilitate discussions, provide updates, and strategize for upcoming events.</li>                  
+                </ul>
+              </div>
+        
+
+
+          </div>
+          
+          
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            
+            <!--================ Professional Experience ============= -->
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Web Developer Intern</h4>
+              <h5>September 2019 - December 2019</h5>
+              <p><em>Monisho Ltd, Dhaka, Bangladesh </em></p>
+              <ul>
+                <li>Designed and developed websites using HTML, CSS, Bootstrap, PHP, MySql.</li>
+                <li>Troubleshooted and traced existing bugs in JIRA from website and implemented enchantments that significantly improved website’s functionality. </li>
+                <li>Designed an interactive website using Bootstrap and further worked on responsiveness of website.</li>
+                <li>Collaborated with peers to further manipulate data to improve overall sales rate.</li>
+              </ul>
+            </div>
+
+                
+            
+            <!--======================= Publication ====================== -->
+            <h3 class="resume-title">Publication</h3>
+            <div class="resume-item">
+              <h4>Development of Online Home Sharing Web Application</h4>
+              <h5>May 2020 - January 2021</h5>
+              <p><em>Published in IEEE 11th Annual Computing and Communication Workshop and Conference (CCWC), NV, USA, 2021</em></p>
+              <p><em>DOI: <a href="https://ieeexplore.ieee.org/document/9375965" target="_blank">10.1109/CCWC51732.2021.9375965</a></em></p>
+              <ul>
+                <li>Created a web-based application in a team of 4, using Bootstrap, HTML, CSS, MySQL, PHP for tourist places of Bangladesh to help travelers find affordable accommodations.</li>
+                <li>Generated earning sources for people who have extra rooms to share with tourist and gathered user feedback to further analyze and improve the functionality of the website using iterative methods.</li>
+                <li>Led a team to successfully develop a user-friendly and responsive website, while also undertaking documentation for the purpose of publishing it as a conference paper.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Resume Section -->
+
+
+
+
+     <!-- ======= Project Section ======= -->
+     <section id="project" class="project section-bg py-5">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Projects</h2>
+          <p>I've worked on several innovative projects showcasing my diverse skill set. From crafting responsive websites to developing cross platform mobile application and each project represents a unique journey in problem-solving and innovation.</p>
+        </div>
+
+        <div class="row mt-4" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="project-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-web-project">Website</li>
+              <li data-filter=".filter-mobile-project">Mobile</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row project-container" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-4 col-md-6 mb-4 flip-img-container filter-web-project">
+            <div class="project-img" id="project3">
+              <div class="project-img-context">                
+                  <h2>EdGenius</h2>
+                  <p>Technologies: HTML, CSS, BootStrap, Python, Django</p>
+                  <p>My Role: Back-End Developer</p>
+                  <div class="project-button-container mt-2">
+                    <a class="btn " href="#" target="_blank" role="button">Demo</a>
+                    <a class="btn " href="https://github.com/khshohag99/Smart_Shop" target="_blank" role="button">Git</a>
+                  </div>                                                 
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4 flip-img-container filter-web-project">
+            <div class="project-img" id="project1">
+              <div class="project-img-context">                
+                  <h2>Wedding Service Portal</h2>
+                  <p>Technologies: Bootstrap, HTML, CSS, PHP, MySQL</p>
+                  <p>My Role: Full-Stack Developer</p>
+                  <div class="project-button-container mt-2">
+                    <a class="btn " href="#" target="_blank" role="button">Demo</a>
+                    <a class="btn " href="https://github.com/khshohag99/Wedding_Service_Portal" target="_blank" role="button">Git</a>
+                  </div>                                                 
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4  flip-img-container filter-web-project">
+            <div class="project-img" id="project2">
+              <div class="project-img-context">                
+                  <h2>Smart Shop</h2>
+                  <p>Technologies: Bootstrap, HTML, CSS, PHP, MySQL</p>
+                  <p>My Role: Full-Stack Developer</p>
+                  <div class="project-button-container mt-2">
+                    <a class="btn " href="#" target="_blank" role="button">Demo</a>
+                    <a class="btn " href="https://github.com/khshohag99/Smart_Shop" target="_blank" role="button">Git</a>
+                  </div>                                                 
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4  flip-img-container filter-mobile-project">
+            <div class="project-img" id="project4">
+              <div class="project-img-context">                
+                  <h2>Swastha</h2>
+                  <p>Technologies: Flutter, Dart, Firestore, Google Fit</p>
+                  <p>My Role: Full-Stack Developer</p>
+                  <div class="project-button-container mt-2">
+                    <!-- <a class="btn " href="#" target="_blank" role="button">Demo</a> -->
+                    <a class="btn " href="https://github.com/khshohag99/Swastha_Health_Monitoring_App" target="_blank" role="button">Git</a>
+                  </div>                                                 
+              </div>
+            </div>
+          </div>  
+          
+        </div>
+
+      </div>
+    </section><!-- End Project Section -->
+             
+          
+         
+          
+
+    
+
+
+
+      <!--=================================== Contact Section ========================== -->
+      <section id="contact" class="contact py-5 bg-contact">
+        <div class="container">
+            <div class="section-title">
+              <h2>Contact</h2>
+              <p> Feel free to reach out if you have any inquiries or just want to connect. I'm currently located in Windsor, ON, Canada, and you can contact me through the following channels.</p>
+            </div>
+            <div class="row" data-aos="fade-in">
+              <div class="col-lg-5 d-flex align-items-stetch">
+                <div class="info">
+                  <div class="address">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h4>Location:</h4>
+                    <p>Bruce Avenue, Windsor, ON, Canada</p>
+                  </div>
+                  <div class="email">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h4>Email:</h4>
+                    <p>khondoker.aminuzzman@gmail.com</p>
+                  </div>
+                  <div class="phone">
+                    <i class="fa-solid fa-phone"></i>
+                    <h4>Call:</h4>
+                    <p>(519)-982-4972</p>
+                  </div>
+
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.2859319154577!2d-83.03322892415261!3d42.293763939287786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2d022e7581af%3A0x3da84f4a4eb733b3!2sBruce%20Ave%2C%20Windsor%2C%20ON!5e0!3m2!1sen!2sca!4v1699467817560!5m2!1sen!2sca" frameborder="0" style="border:0; border-radius: 25px; width: 100%; height: 290px; border: 5px solid #7692ff; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);" allowfullscreen></iframe>
+
+                </div>
+              </div>
+
+              <!--====== Contact Form right side=====  -->
+              <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+                <form id="contact-form" method="post" role="form">
+                  
+                    <div class="input-box">
+                      <input type="text" id="name" class="input-field" required>
+                      <label for="name" class="form-label">Your Name</label>
+                    </div>
+                    <div class="input-box">
+                      <input type="text" id="email" class="input-field" required>
+                      <label for="email" class="form-label">Your Email</label>                      
+                    </div>
+                  
+                  <div class="input-box">
+                    <input type="text" id="subject" class="input-field" required>
+                    <label for="subject" class="form-label">Subject</label>
+
+                  <div class="input-box">
+                    <textarea name="" id="message"  rows="10" class="text-field" required></textarea></textarea>
+                    <label for="message" class="form-label">Message</label>
+                  </div>
+
+                  <div class="text-center">
+                    <button type="submit" onclick="sendMail()" class="form-button">Send Message</button>
+                  </div>
+
+                </form>
+                <!-- <form id="contact-form" method="post" role="form" class="php-email-form">
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="name">Your Name</label>
+                      <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                      <div class="validate"></div>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="name">Your Email</label>
+                      <input type="email" name="email" class="form-control" id="email" data-rule="email" data-msg="Please enter a valid email">
+                      <div class="validate"></div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Subject</label>
+                    <input type="text" name="subject" class="form-control" id="subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject">
+                    <div class="validate"></div>
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Message</label>
+                    <textarea class="form-control" name="message" id="message" rows="10" data-rule="required" data-msg="Please write a message"></textarea>
+                    <div class="validate"></div>
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" onclick="sendMail()">Send Message</button>
+                  </div>
+                  </form>               -->
+              </div>
+              
+            </div>
+            <p class="mb-0 contact-quote">May your days be woven with threads of success and joy. Until our stories intertwine again, farewell to new beginnings and exciting adventures ahead!</p>
+        </div>
+      </section>
+
+    </main>
+
+    <!--====================== Back to top button ======================== -->
+    <a href="#" class="back-to-top"><i class='bx bxs-chevron-up'></i></a>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!--================ Filtering Skills =============== -->
+    <script>
+            $(document).ready(function () {
+            // Hide all skills initially
+            $(".progress").hide();
+
+            // Show only the "Programming" category by default
+            $(".filter-language").show();
+
+            // Add click event to filter buttons
+            $("#skill-flters li").click(function () {
+              var selectedFilter = $(this).data("filter");
+
+              // Hide all skills except the selected category
+              $(".progress").hide();
+              $(selectedFilter).show();
+
+              // Trigger progress animation only when the category is clicked
+              $(".progress-bar").css("width", "0").animate({ width: "100%" }, 1000);
+
+              // Toggle active class on filter buttons
+              $("#skill-flters li").removeClass("filter-active");
+              $(this).addClass("filter-active");
+            });
+          });
+    </script>
+
+<!--================ Filtering projects =============== -->
+<script>
+  $(document).ready(function () {
+    // Show all project items by default
+    $(".flip-img-container").show();
+
+    // Add click event to filter buttons
+    $("#project-flters li").click(function () {
+      var selectedFilter = $(this).data("filter");
+
+      // Toggle active class on filter buttons
+      $("#project-flters li").removeClass("filter-active");
+      $(this).addClass("filter-active");
+
+      if (selectedFilter === "*") {
+        // Show all project items when "All" is clicked
+        $(".flip-img-container").show();
+      } else {
+        // Hide all project items except the selected category
+        $(".flip-img-container").hide();
+        $(selectedFilter).show();
+      }
+    });
+  });
+</script>
+
+
+
+
+
+
+
+
+
+      <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+   <!-- Template Main JS File -->
+   <script src="assets/js/main.js"></script>
+
+</body>
+</html>
